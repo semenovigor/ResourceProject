@@ -1,0 +1,11 @@
+<suite name="Suite1">
+
+    <test name="ResourceProjectBySelenium" >
+        <classes>
+            <class name="com.tests.a_b_testing_page_test.ABTestingPageTest" />
+            <class name="com.tests.add_remove_elements_test.AddRemoveElementsPageTest"/>
+            <class name="com.tests.basic_auth_test.BasicAuthPageTest"/>
+            <class name="com.tests.broken_images_test.BrokenImagesPageTest"/>
+        </classes>
+    </test>
+</suite>
