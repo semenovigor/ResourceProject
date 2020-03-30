@@ -15,9 +15,18 @@ public class CheckBoxesPage {
         checkBoxesLink.click();
     }
 
-    public void clickBoxes(){
-        listBoxes.get(1).click();
-        listBoxes.get(2).click();
+
+    public void checkIsSelectedorEnabled() throws InterruptedException {
+        for (WebElement list: listBoxes){
+            if(list.isSelected()){
+                list.click();
+                Thread.sleep(2000);
+            }
+            if(!list.isSelected()){
+                list.click();
+                Thread.sleep(2000);
+            }
+        }
     }
 
 }

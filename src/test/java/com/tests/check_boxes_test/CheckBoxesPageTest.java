@@ -11,9 +11,9 @@ public class CheckBoxesPageTest extends TestBase {
         checkBoxesPage.clickLink();
 
     }
+
     @Test(dependsOnMethods = "clickLink")
-    void clickCheckBoxes() throws InterruptedException {
-        checkBoxesPage.clickBoxes();
-        Thread.sleep(5000);
+    public void checkBoxIsSelectedorEnabled() throws InterruptedException {
+        checkBoxesPage.checkIsSelectedorEnabled();
     }
 }
