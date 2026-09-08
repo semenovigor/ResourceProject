@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Планировка бани 8×5 м</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #292524;
+      --paper: #f5f0e8;
+      --rest: #d6e4d2;
+      --shower: #c5dbe8;
+      --steam: #e8c5b8;
+      --tambour: #e8e0d0;
+      --wc: #ddd6fe;
+      --tech: #e7e5e4;
+      --accent: #9a3412;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PT Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 20% 0%, #efe6d6 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 20%, #e4ddd0 0%, transparent 45%),
+        var(--paper);
+      line-height: 1.45;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 20px 48px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: 1.4fr 0.9fr;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: #fffdf8;
+      border: 1px solid #d6d3d1;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(28, 25, 23, 0.06);
+    }
+    .plan-wrap {
+      overflow: auto;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.03) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,.03) 1px, transparent 1px),
+        #fff;
+      background-size: 20px 20px;
+      border-radius: 8px;
+    }
+    svg { display: block; width: 100%; height: auto; min-width: 640px; }
+    .room-label {
+      font-size: 15px;
+      font-weight: 700;
+      fill: var(--ink);
+    }
+    .room-sub {
+      font-size: 12px;
+      fill: var(--muted);
+    }
+    .dim {
+      font-size: 12px;
+      font-weight: 600;
+      fill: var(--accent);
+    }
+    .north {
+      font-size: 11px;
+      font-weight: 700;
+      fill: var(--muted);
+      letter-spacing: 0.08em;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 6px;
+      border-bottom: 1px solid #e7e5e4;
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-weight: 600; font-size: 0.8rem; }
+    .swatch {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,.15);
+      margin-right: 6px;
+      vertical-align: -1px;
+    }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 6px 0; }
+    .note {
+      margin-top: 14px;
+      padding: 12px;
+      background: #fff7ed;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.92rem;
+    }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 10px 0 0;
+      font-size: 0.9rem;
+    }
+    .flow span {
+      background: #f5f5f4;
+      border: 1px solid #d6d3d1;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+    .flow em { color: var(--muted); font-style: normal; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Планировка бани 8 × 5 м</h1>
+    <p class="lead">
+      Общая площадь 40 м². Парилка фиксирована 2,8 × 2,8 м.
+      Схема: вход → тамбур → комната отдыха → душевая/моечная → парилка.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="plan-wrap">
+          <!-- Масштаб: 1 м = 80 px. Здание 8×5 → 640×400 + поля -->
+          <svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="План бани 8 на 5 метров">
+            <defs>
+              <pattern id="wood" width="12" height="12" patternUnits="userSpaceOnUse">
+                <path d="M0 12 L12 0" stroke="#b45309" stroke-width="0.6" opacity="0.25"/>
+              </pattern>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#9a3412"/>
+              </marker>
+            </defs>
+
+            <!-- Север -->
+            <g transform="translate(700, 36)">
+              <circle cx="0" cy="0" r="18" fill="#fff" stroke="#a8a29e"/>
+              <line x1="0" y1="12" x2="0" y2="-10" stroke="#44403c" stroke-width="2"/>
+              <polygon points="0,-14 -4,-4 4,-4" fill="#44403c"/>
+              <text class="north" x="0" y="28" text-anchor="middle">СЕВЕР</text>
+            </g>
+
+            <!-- Наружные стены: внутренний контур начинается с (60,80) -->
+            <g transform="translate(60,80)">
+              <!-- Наружная обводка -->
+              <rect x="-12" y="-12" width="664" height="424" fill="#d6d3d1" stroke="#44403c" stroke-width="2"/>
+              <rect x="0" y="0" width="640" height="400" fill="#fffdf8" stroke="#1c1917" stroke-width="3"/>
+
+              <!-- КОМНАТА ОТДЫХА: 4.0 × 5.0 = 320 × 400 -->
+              <rect x="0" y="0" width="320" height="400" fill="var(--rest)" stroke="#1c1917" stroke-width="2"/>
+              <text class="room-label" x="200" y="150" text-anchor="middle">КОМНАТА ОТДЫХА</text>
+              <text class="room-sub" x="200" y="170" text-anchor="middle">чистая зона ≈ 15,6 м²</text>
+
+              <!-- Тамбур внутри КО у входа слева снизу: 1.5 × 1.8 -->
+              <rect x="0" y="256" width="120" height="144" fill="var(--tambour)" stroke="#1c1917" stroke-width="2"/>
+              <text class="room-label" x="60" y="320" text-anchor="middle" style="font-size:13px">ТАМБУР</text>
+              <text class="room-sub" x="60" y="338" text-anchor="middle">1,5 × 1,8 м</text>
+
+              <!-- С/У в тамбурной зоне / рядом: 1.2 × 1.4 у северной стены комнаты -->
+              <rect x="0" y="0" width="96" height="112" fill="var(--wc)" stroke="#1c1917" stroke-width="2"/>
+              <text class="room-label" x="48" y="48" text-anchor="middle" style="font-size:13px">С/У</text>
+              <text class="room-sub" x="48" y="66" text-anchor="middle">1,2 × 1,4 м</text>
+              <!-- унитаз -->
+              <ellipse cx="48" cy="88" rx="14" ry="10" fill="#fff" stroke="#57534e"/>
+
+              <!-- Мебель КО -->
+              <!-- стол -->
+              <rect x="150" y="200" width="100" height="60" rx="4" fill="#fff" stroke="#57534e" stroke-width="1.5"/>
+              <text class="room-sub" x="200" y="235" text-anchor="middle">стол</text>
+              <!-- диван -->
+              <rect x="140" y="40" width="150" height="48" rx="6" fill="#fafaf9" stroke="#57534e" stroke-width="1.5"/>
+              <text class="room-sub" x="215" y="68" text-anchor="middle">диван</text>
+              <!-- печь-камин / топка (опционально из КО) -->
+              <rect x="280" y="300" width="32" height="50" fill="#78716c" stroke="#1c1917"/>
+              <text class="room-sub" x="296" y="290" text-anchor="middle">топка</text>
+
+              <!-- ДУШЕВАЯ / МОЕЧНАЯ: полоса 1.2×2.8 у парилки + зона 4.0×2.2 -->
+              <!-- Правая половина здания: x=320..640 (4.0 м), y=0..400 (5.0 м) -->
+
+              <!-- Верх: переход/душ 1.2×2.8 + парилка 2.8×2.8 -->
+              <rect x="320" y="0" width="96" height="224" fill="var(--shower)" stroke="#1c1917" stroke-width="2"/>
+              <text class="room-label" x="368" y="100" text-anchor="middle" style="font-size:13px">ДУШ</text>
+              <text class="room-sub" x="368" y="118" text-anchor="middle">1,2 × 2,8</text>
+              <!-- душевая лейка -->
+              <circle cx="368" cy="150" r="16" fill="none" stroke="#0369a1" stroke-width="2"/>
+              <line x1="368" y1="150" x2="368" y2="175" stroke="#0369a1" stroke-width="2"/>
+
+              <!-- ПАРИЛКА 2.8 × 2.8 -->
+              <rect x="416" y="0" width="224" height="224" fill="var(--steam)" stroke="#1c1917" stroke-width="2"/>
+              <rect x="416" y="0" width="224" height="224" fill="url(#wood)"/>
+              <text class="room-label" x="528" y="100" text-anchor="middle">ПАРИЛКА</text>
+              <text class="room-sub" x="528" y="120" text-anchor="middle">2,8 × 2,8 м · 7,84 м²</text>
+              <!-- полки -->
+              <rect x="432" y="20" width="28" height="184" fill="#fdba74" stroke="#9a3412"/>
+              <rect x="468" y="20" width="28" height="184" fill="#fed7aa" stroke="#9a3412"/>
+              <text class="room-sub" x="464" y="210" text-anchor="middle">полки</text>
+              <!-- печь -->
+              <rect x="580" y="150" width="44" height="54" fill="#44403c" stroke="#1c1917"/>
+              <text class="room-sub" x="602" y="140" text-anchor="middle">печь</text>
+              <!-- каменка -->
+              <rect x="586" y="156" width="32" height="18" fill="#a8a29e"/>
+
+              <!-- Нижняя моечная зона 4.0 × 2.2 -->
+              <rect x="320" y="224" width="320" height="176" fill="var(--shower)" stroke="#1c1917" stroke-width="2"/>
+              <text class="room-label" x="480" y="300" text-anchor="middle">МОЕЧНАЯ / ДУШЕВАЯ</text>
+              <text class="room-sub" x="480" y="320" text-anchor="middle">4,0 × 2,2 м · 8,8 м²</text>
+              <!-- скамьи -->
+              <rect x="340" y="340" width="120" height="28" fill="#fff" stroke="#57534e"/>
+              <rect x="500" y="340" width="120" height="28" fill="#fff" stroke="#57534e"/>
+              <text class="room-sub" x="400" y="358" text-anchor="middle">скамья</text>
+              <text class="room-sub" x="560" y="358" text-anchor="middle">скамья</text>
+              <!-- второй душ -->
+              <circle cx="600" cy="270" r="14" fill="none" stroke="#0369a1" stroke-width="2"/>
+              <line x1="600" y1="270" x2="600" y2="292" stroke="#0369a1" stroke-width="2"/>
+              <text class="room-sub" x="600" y="310" text-anchor="middle">душ</text>
+
+              <!-- Двери (проёмы) -->
+              <!-- вход с улицы в тамбур (юг) -->
+              <path d="M40 400 Q40 360 80 360" fill="none" stroke="#9a3412" stroke-width="2"/>
+              <line x1="40" y1="400" x2="80" y2="400" stroke="#fffdf8" stroke-width="8"/>
+              <!-- тамбур → КО -->
+              <path d="M120 320 Q150 320 150 290" fill="none" stroke="#9a3412" stroke-width="2"/>
+              <line x1="120" y1="300" x2="120" y2="340" stroke="#d6e4d2" stroke-width="8"/>
+              <!-- КО → моечная -->
+              <path d="M320 280 Q360 280 360 250" fill="none" stroke="#9a3412" stroke-width="2"/>
+              <line x1="320" y1="260" x2="320" y2="300" stroke="#fffdf8" stroke-width="8"/>
+              <!-- моечная → душ у парилки -->
+              <line x1="360" y1="224" x2="400" y2="224" stroke="#c5dbe8" stroke-width="8"/>
+              <!-- душ → парилка -->
+              <path d="M416 120 Q450 120 450 90" fill="none" stroke="#9a3412" stroke-width="2"/>
+              <line x1="416" y1="100" x2="416" y2="140" stroke="#fffdf8" stroke-width="8"/>
+              <!-- с/у дверь -->
+              <path d="M96 40 Q120 40 120 70" fill="none" stroke="#9a3412" stroke-width="1.5"/>
+              <line x1="96" y1="40" x2="96" y2="72" stroke="#d6e4d2" stroke-width="6"/>
+
+              <!-- Окно в КО -->
+              <rect x="180" y="-8" width="80" height="8" fill="#7dd3fc" stroke="#0369a1"/>
+              <text class="room-sub" x="220" y="-14" text-anchor="middle">окно</text>
+              <!-- Окно в моечной -->
+              <rect x="632" y="280" width="8" height="50" fill="#7dd3fc" stroke="#0369a1"/>
+
+              <!-- Размеры наружные -->
+              <line x1="0" y1="430" x2="640" y2="430" stroke="#9a3412" stroke-width="1.5"/>
+              <line x1="0" y1="422" x2="0" y2="438" stroke="#9a3412"/>
+              <line x1="640" y1="422" x2="640" y2="438" stroke="#9a3412"/>
+              <text class="dim" x="320" y="448" text-anchor="middle">8,0 м</text>
+
+              <line x1="-30" y1="0" x2="-30" y2="400" stroke="#9a3412" stroke-width="1.5"/>
+              <line x1="-38" y1="0" x2="-22" y2="0" stroke="#9a3412"/>
+              <line x1="-38" y1="400" x2="-22" y2="400" stroke="#9a3412"/>
+              <text class="dim" x="-48" y="205" text-anchor="middle" transform="rotate(-90 -48 205)">5,0 м</text>
+
+              <!-- Размеры зон по ширине -->
+              <line x1="0" y1="-36" x2="320" y2="-36" stroke="#9a3412" stroke-width="1"/>
+              <text class="dim" x="160" y="-42" text-anchor="middle">4,0 м</text>
+              <line x1="320" y1="-36" x2="640" y2="-36" stroke="#9a3412" stroke-width="1"/>
+              <text class="dim" x="480" y="-42" text-anchor="middle">4,0 м</text>
+
+              <line x1="416" y1="-58" x2="640" y2="-58" stroke="#9a3412" stroke-width="1"/>
+              <text class="dim" x="528" y="-64" text-anchor="middle">парилка 2,8 м</text>
+            </g>
+
+            <!-- Стрелка входа -->
+            <text class="dim" x="140" y="520" text-anchor="middle">ВХОД</text>
+            <line x1="140" y1="505" x2="140" y2="475" stroke="#9a3412" stroke-width="2" marker-end="url(#arrow)"/>
+          </svg>
+        </div>
+        <div class="flow">
+          <span>Улица</span><em>→</em>
+          <span>Тамбур</span><em>→</em>
+          <span>Комната отдыха</span><em>→</em>
+          <span>Моечная / душ</span><em>→</em>
+          <span>Парилка</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h2>Экспликация помещений</h2>
+          <table>
+            <thead>
+              <tr><th>Помещение</th><th>Размер</th><th>S</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="swatch" style="background:#d6e4d2"></span>Комната отдыха (чистая)</td>
+                <td>остаток левого блока</td>
+                <td>15,6 м²</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#e8e0d0"></span>Тамбур</td>
+                <td>1,5 × 1,8 м</td>
+                <td>2,7 м²</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#ddd6fe"></span>Санузел</td>
+                <td>1,2 × 1,4 м</td>
+                <td>1,7 м²</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#c5dbe8"></span>Моечная / душевая</td>
+                <td>4,0 × 2,2 + 1,2 × 2,8</td>
+                <td>12,2 м²</td>
+              </tr>
+              <tr>
+                <td><span class="swatch" style="background:#e8c5b8"></span>Парилка</td>
+                <td>2,8 × 2,8 м</td>
+                <td>7,8 м²</td>
+              </tr>
+              <tr>
+                <td><strong>Итого</strong></td>
+                <td>8,0 × 5,0 м</td>
+                <td><strong>40 м²</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Характеристики планировки</h2>
+          <ul>
+            <li><strong>Габарит:</strong> 8,0 × 5,0 м (внешний контур по заданию; на чертеже — чистые внутренние зоны).</li>
+            <li><strong>Парилка:</strong> 2,8 × 2,8 м в дальнем углу — лучше держит тепло; полки вдоль длинной стены, печь у перегородки с топкой из комнаты отдыха.</li>
+            <li><strong>Душевая/моечная:</strong> просторная нижняя зона 4,0 × 2,2 м + проход-душ 1,2 м у входа в парную.</li>
+            <li><strong>Комната отдыха:</strong> 20 м² — стол на 4–6 человек, диван, ТВ/кух. ниша.</li>
+            <li><strong>Тамбур:</strong> отсекает холод; вешалка, место для дров у входа.</li>
+            <li><strong>С/У:</strong> отдельный, из комнаты отдыха.</li>
+          </ul>
+          <div class="note">
+            Печь: каменка в парной, топка из комнаты отдыха (или из моечной) — удобно подкладывать дрова, не заходя в парную.
+            Высота парной рекомендуется 2,1–2,3 м; комнаты отдыха — 2,4–2,7 м.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
